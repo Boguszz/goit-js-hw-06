@@ -32,6 +32,29 @@
 
 // ============================== Solution - 2 ==============================
 
+// const ingredients = [
+//   "Potatoes",
+//   "Mushrooms",
+//   "Garlic",
+//   "Tomatos",
+//   "Herbs",
+//   "Condiments",
+// ];
+
+// (function createMarkupIngredients() {
+//   const ingredientsRef = document.querySelector("#ingredients");
+
+//   const markupForItems = ingredients.map((ingredient) => {
+//     const itemRef = document.createElement("li");
+//     itemRef.classList.add("item");
+//     itemRef.textContent = ingredient;
+//     return ingredientsRef.append(itemRef);
+//   });
+//   return markupForItems;
+// })();
+
+// ============================== Solution - 3 ==============================
+
 const ingredients = [
   "Potatoes",
   "Mushrooms",
@@ -41,14 +64,11 @@ const ingredients = [
   "Condiments",
 ];
 
-(function createMarkupIngredients() {
-  const ingredientsRef = document.querySelector("#ingredients");
-
-  const markupForItems = ingredients.map((ingredient) => {
-    const itemRef = document.createElement("li");
-    itemRef.classList.add("item");
-    itemRef.textContent = ingredient;
-    return ingredientsRef.append(itemRef);
-  });
-  return markupForItems;
-})();
+const ingredientsRef = document.querySelector("#ingredients");
+const markupForItems = ingredients.map((ingredient) => {
+  const itemRef = document.createElement("li");
+  itemRef.classList.add("item");
+  itemRef.textContent = ingredient;
+  return itemRef;
+});
+ingredientsRef.append(...markupForItems);
